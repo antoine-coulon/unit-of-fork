@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:12
+    ports:
+      - '127.0.0.1:5433:5432'
+    tmpfs: /var/lib/postgresql/data
+    container_name: 'postgres-for-testing'
+    environment:
+      POSTGRES_DB: 'postgres'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'postgres'
+
